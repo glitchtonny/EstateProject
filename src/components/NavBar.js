@@ -14,7 +14,7 @@ const Navbar = ({ isAuthenticated }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <NavLink to="/home">JATE Estates</NavLink>
+          <NavLink to="/home">JATE Estate</NavLink>
 
         </div>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
