@@ -20,7 +20,7 @@
   .navbar-logo {
     height: 40px;
     margin-right: 10px;
-    background-color: #fff;
+    background: none;
   }
 
   .navbar-links a, .navbar-user a {
