@@ -5,10 +5,20 @@ import logo from "../Assets";
 
 const Navbar = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleSearchChange = (event) =>{
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchSubmit = (event)=>{
+    event.preventDefault();
+    //console.log(searchQuerry)
+  }
 
   return (
     <nav className="navbar">
@@ -22,15 +32,19 @@ const Navbar = ({ isAuthenticated }) => {
           <NavLink to="/Blog" activeClassName="active">Blog</NavLink>
         </div>
         <div className={`navbar-user ${isOpen ? 'open' : ''}`}>
-          {isAuthenticated ? (
-            <>
-              <NavLink to="/login" activeClassName="active">Logout</NavLink>
-            </>
-          ) : (
-            <>
-              <NavLink to="/logout" activeClassName="active">Login</NavLink>
-            </>
-          )}
+          <NavLink to="/login" activeClassName="active">Login</NavLink>
+          <NavLink to="/signup" activeClassName="active">Sign Up</NavLink>
+        </div>
+        <div className="navbar-search">
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+            <button type="submit">Search</button>
+          </form>
         </div>
         <div className="navbar-toggle" onClick={toggleNavbar}>
           <span></span>
