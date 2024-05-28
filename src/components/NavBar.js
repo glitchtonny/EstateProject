@@ -29,7 +29,6 @@ const Navbar = ({ isAuthenticated }) => {
           ) : (
             <>
               <NavLink to="/login" activeClassName="active">Login</NavLink>
-              <NavLink to="/signup" activeClassName="active">Sign Up</NavLink>
             </>
           )}
         </div>
