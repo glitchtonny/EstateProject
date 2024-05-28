@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-//import logo from ""
+import logo from "../Assets/logo.png";
 
 const Navbar = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +14,12 @@ const Navbar = ({ isAuthenticated }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <NavLink to="/home">JATE Estate</NavLink>
-
+          <NavLink to="/Home">JATE Estate</NavLink>
+            <img src={logo} alt="JATE Estate" className="navbar-logo"/>
         </div>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-          <NavLink to="/home" activeClassName="active">Home</NavLink>
-          <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+          <NavLink to="/Home" activeClassName="active">Home</NavLink>
+          <NavLink to="/Blog" activeClassName="active">Blog</NavLink>
         </div>
         <div className={`navbar-user ${isOpen ? 'open' : ''}`}>
           {isAuthenticated ? (
