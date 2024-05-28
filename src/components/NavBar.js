@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-import logo from "../Assets/logo.png";
+import logo from "../Assets";
 
 const Navbar = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
