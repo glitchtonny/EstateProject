@@ -15,8 +15,12 @@
     align-items: center;
     width: 100%;
   }
-  
-  
+
+  .navbar-brand a {
+    display: flex;
+    align-items: center;
+  }
+
   .navbar-logo {
     height: 40px;
     margin-right: 10px;
