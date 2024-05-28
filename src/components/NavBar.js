@@ -24,7 +24,6 @@ const Navbar = ({ isAuthenticated }) => {
         <div className={`navbar-user ${isOpen ? 'open' : ''}`}>
           {isAuthenticated ? (
             <>
-              <NavLink to="/profile" activeClassName="active">Profile</NavLink>
               <NavLink to="/logout" activeClassName="active">Logout</NavLink>
             </>
           ) : (
